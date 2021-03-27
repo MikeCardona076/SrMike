@@ -30,15 +30,16 @@ class SrMike(tk.Frame):
     def bienvenida(self):
         mike = pyttsx3.init()
         voices = mike.getProperty('voices')
-        mike.setProperty('voice', voices[3].id)
+        mike.setProperty('voice', voices[0].id)
         mike.say("Hola Usuario, en que puedo ayudarte?")
         mike.runAndWait()
         self.habilidades()
 
     def habilidades(self):
 
-        habilidad_3 = tk.Button(self, text="Mike", command=habilidades.busqueda)
+        habilidad_3 = tk.Button(self, text="Ordenar", command=habilidades.busqueda)
         habilidad_3.pack()
+        habilidad_3.config(font=("Times New Roman", 20))
 ##########################################################################################
 
 
